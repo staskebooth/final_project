@@ -4,9 +4,6 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.text :ingredients
-      t.integer :protien
-      t.integer :carbohydrate
-      t.integer :fat
 
       t.timestamps
     end

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1>Current User</h1>
 
 <table>
   <thead>
@@ -20,9 +20,7 @@
         <td><%= user.password %></td>
         <td><%= user.height %></td>
         <td><%= user.weight %></td>
-        <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,3 +29,6 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+<%= link_to 'New Meal', new_meal_path %>
+<%= link_to 'Show All Meals', meals_path %>
+<%= link_to 'Pick What To Eat NOW!', meals_path%>

@@ -3,6 +3,12 @@ class MealsController < ApplicationController
 
   # GET /meals
   # GET /meals.json
+
+  def random
+    @meals = Meal.random
+    render template: "meals/random"
+  end
+
   def index
     @meals = Meal.all
   end
@@ -69,6 +75,6 @@ class MealsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def meal_params
-      params.require(:meal).permit(:name, :description, :ingredients, :protien, :carbohydrate, :fat)
+      params.require(:meal).permit(:name, :description, :ingredients)
     end
 end
