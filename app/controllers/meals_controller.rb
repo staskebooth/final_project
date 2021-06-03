@@ -3,6 +3,10 @@ class MealsController < ApplicationController
 
   # GET /meals
   # GET /meals.json
+
+  def random
+  end
+
   def index
     @meals = Meal.all
   end
