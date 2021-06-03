@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :meals
   resources :users
   
+    get "meals/" => "movies#random" 
 end
