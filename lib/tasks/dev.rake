@@ -11,6 +11,6 @@ task :sample_data => :environment do
     weight: rand(100..250)
 
   )
-end
+  end
 
 end

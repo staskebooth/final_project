@@ -15,5 +15,5 @@ end
   resources :meals
   resources :users
   
-    get "meals/" => "meals#random" 
+    get "meals/" => "meals#show"
 end

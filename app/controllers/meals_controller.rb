@@ -5,7 +5,7 @@ class MealsController < ApplicationController
   # GET /meals.json
 
   def random
-    render "meals/random"
+    render "meals/#{@meal.random}"
   end
 
   def index
