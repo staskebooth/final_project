@@ -3,6 +3,11 @@ class MealsController < ApplicationController
 
   # GET /meals
   # GET /meals.json
+
+  def random
+    render "meals/#{@meal.random}"
+  end
+
   def index
     @meals = Meal.all
   end
@@ -58,6 +63,7 @@ class MealsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to meals_url, notice: 'Meal was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { render template: "meal/destory.js.erb"}
     end
   end
 
@@ -69,6 +75,6 @@ class MealsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def meal_params
-      params.require(:meal).permit(:name, :description, :ingredients, :protien, :carbohydrate, :fat)
+      params.require(:meal).permit(:name, :description, :ingredients)
     end
 end
