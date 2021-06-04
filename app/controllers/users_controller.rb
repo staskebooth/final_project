@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def login
+  def sign_in
+    render "users/sign_in"
   end
 
   # GET /users/1
