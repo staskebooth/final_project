@@ -63,6 +63,7 @@ class MealsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to meals_url, notice: 'Meal was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { render template: "meal/destory.js.erb"}
     end
   end
 
