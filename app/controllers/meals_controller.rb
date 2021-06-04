@@ -5,8 +5,7 @@ class MealsController < ApplicationController
   # GET /meals.json
 
   def random
-    @meals = Meal.random
-    render template: "meals/random"
+    render "meals/#{@meal.random}"
   end
 
   def index
